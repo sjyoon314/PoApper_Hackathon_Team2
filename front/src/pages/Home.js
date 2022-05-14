@@ -6,7 +6,7 @@ import axios from 'axios';
 function Home() {
   const [login, setLogin] = useState(0)
   const webname="webname";
-  const [username, setUsername] = useState("username")
+  const [username, setUsername] = useState("empty")
   //const [data, setData] = useState([])
   
   
@@ -15,6 +15,8 @@ function Home() {
   }
 
   function LoadingData(){
+    //setLogin(1);
+    console.log(1);
     axios.get('https://localhost:8080/')
     .then((Response)=>{
       console.log(Response);

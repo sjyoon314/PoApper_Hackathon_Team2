@@ -15,11 +15,8 @@ function App() {
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/problem" element={<Problem/>}></Route>
-          <Route exact path="/problem/:id" element={<Problem/>}></Route>
           <Route exact path="/project" element={<Project/>}></Route>
-          <Route exact path="/project/:id" element={<Project/>}></Route>
           <Route exact path="/finish" element={<Finish/>}></Route>
-          <Route exact path="/finish/:id" element={<Finish/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
         </Routes>
       </header>
