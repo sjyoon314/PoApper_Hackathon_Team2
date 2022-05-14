@@ -41,7 +41,7 @@ function Login() {
   <div>
     <form onSubmit={onLoggin} className='loginBox'>
       <div className='webName'>Webname</div>
-      <input type='email' id='id' className='idBox' value={id} onChange={handlechange1}></input>
+      <input type='id' id='id' className='idBox' value={id} onChange={handlechange1}></input>
       <input type='password' id='pw' className='pwBox' value={pw} onChange={handlechange2}></input>
       <input type = "submit" className='submitBtn'></input>
     </form>
