@@ -10,11 +10,8 @@ function Progressing() {
     const [username, setUsername] = useState("username")
     const [list, setList] = useState([
         {index:1, title:'problem example', body:'the problem example is about ...'},
-        {index:2, title:'problem example2', body:'the problem example2 is about ...'},
-        {index:3, title:'problem example3', body:'the problem example3 is about ...'},
-        {index:4, title:'problem example4', body:'the problem example4 is about ...'}
+        {index:2, title:'problem example2', body:'the problem example2 is about ...'}
     ])
-
     window.onload = function(){
         LoadingData();
       }

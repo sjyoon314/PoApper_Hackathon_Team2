@@ -16,15 +16,13 @@ function Header1(props){
     }
     else{
         content = <>
-        <Link to = '/login'>
-            <Button variant='outlined'>LOGIN</Button>
-        </Link>
+            <Link to='/login'><Button variant='outlined'>LOGIN</Button></Link>
         </>
     }
 
     return <>
     <Header>
-        <Header_homepagetag>{props.webname}</Header_homepagetag>
+        <Link to='/'><Header_homepagetag>{props.webname}</Header_homepagetag></Link>
         <Header_search type='text'></Header_search>
         <Header_userset>
         {content}

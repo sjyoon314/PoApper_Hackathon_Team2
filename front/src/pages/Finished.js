@@ -4,15 +4,14 @@ import Header from '../components/Header';
 import Article from '../components/Article';
 import axios from 'axios';
 
-function Progressing() {
+function Finished() {
     const [login, setLogin] = useState(0)
     const webname="webname";
     const [username, setUsername] = useState("username")
     const [list, setList] = useState([
-        {index:1, title:'problem example', body:'the problem example is about ...'},
-        {index:2, title:'problem example2', body:'the problem example2 is about ...'},
-        {index:3, title:'problem example3', body:'the problem example3 is about ...'},
-        {index:4, title:'problem example4', body:'the problem example4 is about ...'}
+        {index:1, title:'finished example', body:'the finished example is about ...'},
+        {index:2, title:'finished example2', body:'the finished example2 is about ...'},
+        {index:3, title:'finished example3', body:'the finished example3 is about ...'}
     ])
 
     window.onload = function(){
@@ -39,4 +38,4 @@ function Progressing() {
     );
 }
 
-export default Progressing;
+export default Finished;

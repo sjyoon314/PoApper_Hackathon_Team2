@@ -2,8 +2,8 @@ import React from "react";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Problem from "./pages/Problem";
-import Project from "./pages/Project";
-import Finish from "./pages/Finish";
+import Progressing from "./pages/Progressing";
+import Finished from "./pages/Finished";
 import Register from "./pages/Register";
 import {BrowserRouter, Link, Routes, Route, Router } from "react-router-dom";
 
@@ -15,8 +15,8 @@ function App() {
           <Route exact path="/" element={<Home/>}></Route>
           <Route exact path="/login" element={<Login/>}></Route>
           <Route exact path="/problem" element={<Problem/>}></Route>
-          <Route exact path="/project" element={<Project/>}></Route>
-          <Route exact path="/finish" element={<Finish/>}></Route>
+          <Route exact path="/progressing" element={<Progressing/>}></Route>
+          <Route exact path="/finished" element={<Finished/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
         </Routes>
       </header>

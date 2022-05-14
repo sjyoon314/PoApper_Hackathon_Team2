@@ -33,6 +33,7 @@ function Register() {
       <div className='webNamer'>Webname</div>
       <input type='id' id='id' className='idBoxr' placeholder='사용할 id를 입력해주세요' value={id} onChange={handlechange1}></input>
       <input type='password' id='pw' className='pwBoxr' placeholder='사용할 pw를 입력해주세요' value={pw} onChange={handlechange2}></input>
+      <input type='password' id='pw' className='pwBoxr' placeholder='사용할 pw를 재입력해주세요' value={pw} onChange={handlechange2}></input>
       <Link to="/login"><input type = "submit" className='submitBtnr'></input></Link>
     </form>
   </div>

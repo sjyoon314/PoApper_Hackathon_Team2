@@ -5,7 +5,7 @@ import axios from 'axios';
 import '../stylesheet/Login.css';
 import Button from '@mui/material/Button';
 
-function Login({location, history}) {
+function Login() {
   const [id, setId] = useState('')
   const [pw, setPw] = useState('')
 

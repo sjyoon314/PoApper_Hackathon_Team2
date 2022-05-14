@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import axios from 'axios';
+//import Example from '../components/Example';
 
 function Home() {
   const [login, setLogin] = useState(0)
@@ -11,6 +12,7 @@ function Home() {
   
   
   window.onload = function(){
+    //console.log("adf");
     LoadingData();
   }
 
@@ -32,8 +34,9 @@ function Home() {
   
   return (
     <div> 
-        {/*페이지 열리면 이 함수를 실행해야 하는데... */}
         <Header login={login} username={username} webname={webname}></Header>
+        {/*<Example></Example>*/}
+        <img src='/images/structure.jpg' width={1200} height={800} style={{margin:200}}></img>
     </div>
   );
 }

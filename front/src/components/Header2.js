@@ -7,8 +7,8 @@ function Header2(){
         <div>
             <Header2Bar>
                 <Link to="/problem">문제 제시</Link>
-                <Link to="/project">진행 중인 프로젝트</Link>
-                <Link to="/finish">완료된 프로젝트</Link>
+                <Link to="/progressing">진행 중인 프로젝트</Link>
+                <Link to="/finished">완료된 프로젝트</Link>
             </Header2Bar>
         </div>
     )
