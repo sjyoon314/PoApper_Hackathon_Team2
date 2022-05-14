@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Link} from 'react-router-dom';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,11 +13,10 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+  createData(1, 'title1', 'body1'),
+  createData(2, 'title2', 'body2'),
+  createData(3, 'title3', 'body3'),
+
 ];
 
 export default function TableProblem() {
@@ -30,12 +30,12 @@ export default function TableProblem() {
             <TableHead>
             <TableRow>
                 <TableCell>Index</TableCell>
-                <TableCell align="right">Title</TableCell>
-                <TableCell align="right">Body</TableCell>
+                <TableCell>Title</TableCell>
+                <TableCell>Body</TableCell>
             </TableRow>
             </TableHead>
             <TableBody>
-            {rows.map((list) => (
+            {list.map((list) => (
                 <TableRow
                 key={list.index}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -43,8 +43,8 @@ export default function TableProblem() {
                 <TableCell component="th" scope="row">
                     {list.index}
                 </TableCell>
-                <TableCell align="right">{list.title}</TableCell>
-                <TableCell align="right">{list.body}</TableCell>
+                <Link to='/problem/:id'><TableCell>{list.title}</TableCell></Link>
+                <Link to=''><TableCell>{list.body}</TableCell></Link>
                 </TableRow>
             ))}
             </TableBody>

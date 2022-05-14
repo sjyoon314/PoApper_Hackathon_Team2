@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import axios from 'axios';
@@ -8,9 +8,14 @@ function Home() {
   const webname="webname";
   const [username, setUsername] = useState("username")
   //const [data, setData] = useState([])
-  function LoadingData(e){
-    e.preventDefault();
-    axios.get('https://localgost:3000/')
+  
+  
+  window.onload = function(){
+    LoadingData();
+  }
+
+  function LoadingData(){
+    axios.get('https://localhost:8080/')
     .then((Response)=>{
       console.log(Response);
       setUsername(Response);})
@@ -19,14 +24,13 @@ function Home() {
       if(username !== 'empty'){
         setLogin(1);
       }
-    }
-  }
-  // data 속에서 username 찾아서 set하고, if문으로 login 변경.
+    }};
+    
 
   
   return (
-    <div>
-        {LoadingData}
+    <div> 
+        {/*페이지 열리면 이 함수를 실행해야 하는데... */}
         <Header login={login} username={username} webname={webname}></Header>
     </div>
   );
