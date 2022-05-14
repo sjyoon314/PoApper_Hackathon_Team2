@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Main.css';
-import {Switch, Link, Route, Routes} from 'react-router-dom';
+import {Link, Route, Routes} from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Login from './Login';
 
