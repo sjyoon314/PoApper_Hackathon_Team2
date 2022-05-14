@@ -1,0 +1,30 @@
+.loginBox{
+    background-color: lightgrey;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+.webName{
+    margin: 10px;
+}
+.idBox{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+}
+.pwBox{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+}
+.submitBtn{
+    margin: 20px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+}

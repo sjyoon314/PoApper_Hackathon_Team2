@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {Link, Route, Routes} from 'react-router-dom';
 import Home from './Home';
-import axios from 'axios'
+import axios from 'axios';
+import '../stylesheet/Login.css';
 
 function Login() {
   const [id, setId] = useState('')
@@ -38,10 +39,11 @@ function Login() {
 
   return (
   <div>
-    <form onSubmit={onLoggin}>
-      <input type='email' id='id' value={id} onChange={handlechange1}></input>
-      <input type='password' id='pw' value={pw} onChange={handlechange2}></input>
-      <input type = "submit"></input>
+    <form onSubmit={onLoggin} className='loginBox'>
+      <div className='webName'>Webname</div>
+      <input type='email' id='id' className='idBox' value={id} onChange={handlechange1}></input>
+      <input type='password' id='pw' className='pwBox' value={pw} onChange={handlechange2}></input>
+      <input type = "submit" className='submitBtn'></input>
     </form>
     {c}
   </div>
