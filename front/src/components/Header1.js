@@ -3,6 +3,39 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
 
+function Header1(props){
+    let content = null;
+    if(props.login === 1){
+        content = <>
+        <Header_userset_username>{props.username}</Header_userset_username>
+        <Header_columnBar></Header_columnBar>
+        <Header_userset_alarm><img src='/images/alarm.jpg' width={20}></img></Header_userset_alarm>
+        <Header_columnBar></Header_columnBar>
+        <Header_logout>Log-out</Header_logout>
+        </>;
+    }
+    else{
+        content = <>
+        <Link to = '/login'>
+            <Button variant='outlined'>LOGIN</Button>
+        </Link>
+        </>
+    }
+
+    return <>
+    <Header>
+        <Header_homepagetag>{props.webname}</Header_homepagetag>
+        <Header_search type='text'></Header_search>
+        <Header_userset>
+        {content}
+        </Header_userset>
+    </Header>
+    <Header_rowBar></Header_rowBar>
+    </>
+}
+
+export default Header1;
+
 const Header = styled.div`
     display: flex;
     background-color: white;
@@ -55,36 +88,3 @@ const Header_userset_alarm = styled.div`
 const Header_logout = styled.div`
   
 `;
-
-function Header1(props){
-    let content = null;
-    if(props.login === 1){
-        content = <>
-        <Header_userset_username>{props.username}</Header_userset_username>
-        <Header_columnBar></Header_columnBar>
-        <Header_userset_alarm><img src='/images/alarm.jpg' width={20}></img></Header_userset_alarm>
-        <Header_columnBar></Header_columnBar>
-        <Header_logout>Log-out</Header_logout>
-        </>;
-    }
-    else{
-        content = <>
-        <Link to = '/login'>
-            <Button variant='outlined'>LOGIN</Button>
-        </Link>
-        </>
-    }
-
-    return <>
-    <Header>
-        <Header_homepagetag>{props.webname}</Header_homepagetag>
-        <Header_search type='text'></Header_search>
-        <Header_userset>
-        {content}
-        </Header_userset>
-    </Header>
-    <Header_rowBar></Header_rowBar>
-    </>
-}
-
-export default Header1;
