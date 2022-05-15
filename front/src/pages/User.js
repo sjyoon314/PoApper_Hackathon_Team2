@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
-import Home from './Home';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../stylesheet/User.css';
 import Button from '@mui/material/Button';
@@ -63,7 +62,7 @@ function User() {
   return (
   <div>
     <form onSubmit={onRevise} className='UserBox'>
-      <div className='Webname'><img src='/images/logo.jpg' width={150}/></div>
+      <div className='Webname'><img src='/images/logo.jpg' width={150} alt=''/></div>
       <div className='Show'>username: {username}</div>
       <div className='Show'>stuID: {stuID}</div>
       <div className='Show'>

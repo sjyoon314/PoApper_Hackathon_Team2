@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import {Link, Route, Routes} from 'react-router-dom';
-import Home from './Home';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
 import '../stylesheet/Register.css';
 
@@ -29,7 +28,7 @@ function Register() {
   return (
   <div>
     <form onSubmit={onRegister} className='loginBoxr'>
-      <div className='webNamer'><img src='/images/logo.jpg' width={170}/></div>
+      <div className='webNamer'><img src='/images/logo.jpg' width={170} alt=''/></div>
       <input type='id' id='id' className='idBoxr' placeholder='사용할 id를 입력해주세요' value={id} onChange={handlechange1}></input>
       <input type='password' id='pw' className='pwBoxr' placeholder='사용할 pw를 입력해주세요' value={pw} onChange={handlechange2}></input>
       <input type='password' id='pw' className='pwBoxr' placeholder='사용할 pw를 재입력해주세요' value={pw} onChange={handlechange2}></input>

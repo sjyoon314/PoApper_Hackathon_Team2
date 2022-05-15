@@ -5,6 +5,8 @@ import Button from '@mui/material/Button';
 import axios from 'axios';
 
 function Header1(props){
+    
+
     let content = null;
 
     function onLogout(e){
@@ -18,10 +20,10 @@ function Header1(props){
 
     if(props.login === 1){
         content = <>
-        <Link to='/user'><Header_userset_username>{props.username}</Header_userset_username></Link>
-        <Header_columnBar></Header_columnBar>
-        <Header_userset_alarm><img src='/images/alarm.jpg' width={20}></img></Header_userset_alarm>
-        <Header_columnBar></Header_columnBar>
+        <Link to='/user'><HeaderUsersetUsername>{props.username}</HeaderUsersetUsername></Link>
+        <HeaderColumnBar></HeaderColumnBar>
+        <HeaderUsersetAlarm><img src='/images/alarm.jpg' width={20} alt=''></img></HeaderUsersetAlarm>
+        <HeaderColumnBar></HeaderColumnBar>
         <Button onClick={onLogout}>Log-out</Button>
         </>;
     }
@@ -33,13 +35,13 @@ function Header1(props){
 
     return <>
     <Header>
-        <Link to='/'><Header_homepagetag><img src='/images/logo.jpg' width={170}></img></Header_homepagetag></Link>
-        <Header_search type='text'></Header_search>
-        <Header_userset>
+        <Link to='/'><HeaderHomepagetag><img src='/images/logo.jpg' width={170} alt=''></img></HeaderHomepagetag></Link>
+        <HeaderSearch type='text'></HeaderSearch>
+        <HeaderUserset>
         {content}
-        </Header_userset>
+        </HeaderUserset>
     </Header>
-    <Header_rowBar></Header_rowBar>
+    <HeaderRowBar></HeaderRowBar>
     </>
 }
 
@@ -55,15 +57,15 @@ const Header = styled.div`
     height: 75px;
 `;
 
-const Header_homepagetag = styled.div`
+const HeaderHomepagetag = styled.div`
     font-size: 30px;
 `;
 
-const Header_search = styled.input`
-  
+const HeaderSearch = styled.input`
+
 `;
 
-const Header_userset = styled.div`
+const HeaderUserset = styled.div`
     margin-left: 100px;
     background-color: white;
     display: flex;
@@ -74,22 +76,22 @@ const Header_userset = styled.div`
     font-size: 14px;
 `;
 
-const Header_rowBar = styled.div`
+const HeaderRowBar = styled.div`
     background-color: grey;
     width: 100%;
     height: 2px;
 `;
 
-const Header_userset_username = styled.div`
-  
+const HeaderUsersetUsername = styled.div`
+
 `;
 
-const Header_columnBar = styled.div`
+const HeaderColumnBar = styled.div`
     background-color: grey;
     width: 2px;
     height: 15px;
 `;
 
-const Header_userset_alarm = styled.div`
-  
+const HeaderUsersetAlarm = styled.div`
+
 `;
