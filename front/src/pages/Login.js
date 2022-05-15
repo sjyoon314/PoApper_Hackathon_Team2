@@ -7,12 +7,16 @@ import Button from '@mui/material/Button';
 function Login() {
   const [id, setId] = useState('')
   const [pw, setPw] = useState('')
+  const [check1, setCheck1] = useState(0)
+  const [check2, setCheck2] = useState(0)
 
   function handlechange1(e){
     setId(e.target.value);
+    setCheck1(e.target.value.length);
   }
   function handlechange2(e){
     setPw(e.target.value);
+    setCheck2(e.target.value.length);
   }
 
   function onLoggin(e){

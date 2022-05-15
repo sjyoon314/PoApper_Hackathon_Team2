@@ -1,5 +1,4 @@
-import React, {useState, useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useState} from 'react';
 import Header from '../components/Header';
 import axios from 'axios';
 //import Example from '../components/Example';
@@ -33,7 +32,7 @@ function Home() {
     <div> 
         <Header login={login} username={username} webname={webname}></Header>
         {/*<Example></Example>*/}
-        <img src='/images/structure.jpg' width={1200} height={800} style={{margin:200}}></img>
+        <img src='/images/structure.jpg' width={1200} height={800} style={{margin:200}} alt=''></img>
     </div>
   );
 }

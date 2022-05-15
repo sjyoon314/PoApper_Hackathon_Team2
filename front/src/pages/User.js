@@ -52,26 +52,32 @@ function User() {
     })}
 
     function handle1(e){
-        setId(e.target.value);
+        setStuID(e.target.value);
     }
 
     function handle2(e){
         setPw(e.target.value);
     }
 
+    function handle3(e){
+        setUsername(e.target.value);
+    }
+
   return (
   <div>
     <form onSubmit={onRevise} className='UserBox'>
       <div className='Webname'><img src='/images/logo.jpg' width={150} alt=''/></div>
-      <div className='Show'>username: {username}</div>
-      <div className='Show'>stuID: {stuID}</div>
+      <div className='Show'>id: {id}</div>
       <div className='Show'>
-      id: <input className='Input' value={id} onChange={handle1}></input>
+      Username: <input className='Input' value={username} onChange={handle1}></input>
+      </div>
+      <div className='Show'>
+      StuID: <input className='Input' value={stuID} onChange={handle3}></input>
       </div>
       <div className='Show'>
       pw: <input className='Input' value={pw} onChange={handle2}></input>
       </div>
-      <div className='Tip'>위에서 id, pw를 수정할 수 있습니다.</div>
+      <div className='Tip'>위에서 id를 제외한 정보를 수정할 수 있습니다.</div>
       <ButtonGroup>
         <Button type='submit' variant='contained' size='medium'>REVISE</Button>
         <Button className='DelBtn' variant='contained' color='error' onClick={onDelete}>DELETE</Button>
