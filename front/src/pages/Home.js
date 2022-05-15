@@ -8,16 +8,13 @@ function Home() {
   const [login, setLogin] = useState(0)
   const webname="webname";
   const [username, setUsername] = useState("empty")
-  //const [data, setData] = useState([])
   
-  
-  window.onload = function(){
-    //console.log("adf");
+  window.onload = function(){ 
     LoadingData();
   }
 
   function LoadingData(){
-    //setLogin(1);
+    setLogin(1);
     console.log(1);
     axios.get('https://localhost:8080/')
     .then((Response)=>{

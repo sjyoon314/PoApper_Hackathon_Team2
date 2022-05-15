@@ -5,6 +5,7 @@ import Problem from "./pages/Problem";
 import Progressing from "./pages/Progressing";
 import Finished from "./pages/Finished";
 import Register from "./pages/Register";
+import User from "./pages/User";
 import {BrowserRouter, Link, Routes, Route, Router } from "react-router-dom";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/progressing" element={<Progressing/>}></Route>
           <Route exact path="/finished" element={<Finished/>}></Route>
           <Route exact path="/register" element={<Register/>}></Route>
+          <Route exact path="/user" element={<User/>}></Route>
         </Routes>
       </header>
   );

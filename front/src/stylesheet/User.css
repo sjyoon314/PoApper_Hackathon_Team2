@@ -1,0 +1,30 @@
+.UserBox{
+    background-color: lightgrey;
+    border: solid grey 2px;
+    margin: 0 auto;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.Webname{
+    font-size: 24px;
+    text-align: center;
+}
+.Show{
+    font-size: 20px;
+}
+.Input{
+    width: 200px;
+    height: 30px;
+}
+.Tip{
+    color: grey;
+}
+
+.DelBtn{
+    float: left;
+    margin-left: 10px;
+}

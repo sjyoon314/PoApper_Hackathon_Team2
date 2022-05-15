@@ -30,7 +30,7 @@ function Login() {
   return (
   <div>
     <form onSubmit={onLoggin} className='loginBox'>
-      <div className='webName'>Webname</div>
+      <div className='webName'><img src='/images/logo.jpg' width={170}/></div>
       <input type='id' id='id' className='idBox' placeholder='id를 입력해주세요' value={id} onChange={handlechange1}></input>
       <input type='password' id='pw' className='pwBox' placeholder='pw를 입력해주세요' value={pw} onChange={handlechange2}></input>
       <Link to="/"><input type = "submit" className='submitBtn'></input></Link>

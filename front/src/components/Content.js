@@ -23,6 +23,16 @@ export default function Content(props) {
     const [body, setBody] =useState()
     const [host, setHost] = useState();
 
+    function onDelete(e){
+        e.preventDefault();
+        axios({
+        method: "DELETE",
+        url: 'http://localhost:8080/register',
+        data:{
+        }
+    })
+    }
+
     return (
         <Contents>
         <TableContainer component={Paper}>
@@ -45,9 +55,7 @@ export default function Content(props) {
                 </TableCell>
                 <TableCell align='right'>{list.title}</TableCell>
                 <TableCell align='right'>{list.body}</TableCell>
-                <TableCell align='right'><Button variant='contained' color='error' onClick={()=>{
-                    //본래 동적 라우팅 구현하여 그 안에 update, delete를 넣는 방식이었으나..
-                }}>Del</Button></TableCell>
+                <TableCell align='right'><Button variant='contained' color='error' onClick={onDelete}>Del</Button></TableCell> 
                 </TableRow>
             ))}
             </TableBody>

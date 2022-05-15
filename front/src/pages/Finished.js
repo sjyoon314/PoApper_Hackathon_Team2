@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import Header from '../components/Header';
 import Article from '../components/Article';
 import axios from 'axios';

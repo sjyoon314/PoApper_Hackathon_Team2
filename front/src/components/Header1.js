@@ -2,16 +2,27 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import Button from '@mui/material/Button';
+import axios from 'axios';
 
 function Header1(props){
     let content = null;
+
+    function onLogout(e){
+        e.preventDefault();
+        axios({
+        method: "DELETE",
+        url: 'http://localhost:8080/register',
+        data:{
+        }
+    })}
+
     if(props.login === 1){
         content = <>
-        <Header_userset_username>{props.username}</Header_userset_username>
+        <Link to='/user'><Header_userset_username>{props.username}</Header_userset_username></Link>
         <Header_columnBar></Header_columnBar>
         <Header_userset_alarm><img src='/images/alarm.jpg' width={20}></img></Header_userset_alarm>
         <Header_columnBar></Header_columnBar>
-        <Header_logout>Log-out</Header_logout>
+        <Button onClick={onLogout}>Log-out</Button>
         </>;
     }
     else{
@@ -22,7 +33,7 @@ function Header1(props){
 
     return <>
     <Header>
-        <Link to='/'><Header_homepagetag>{props.webname}</Header_homepagetag></Link>
+        <Link to='/'><Header_homepagetag><img src='/images/logo.jpg' width={170}></img></Header_homepagetag></Link>
         <Header_search type='text'></Header_search>
         <Header_userset>
         {content}
@@ -80,9 +91,5 @@ const Header_columnBar = styled.div`
 `;
 
 const Header_userset_alarm = styled.div`
-  
-`;
-
-const Header_logout = styled.div`
   
 `;
